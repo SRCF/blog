@@ -4,7 +4,7 @@
   {{ $paginator = .Data }}
 {{ end }}
 <header class="container">
-  <h1>{{ if eq .Kind "taxonomy" }}{{ humanize .Data.Singular }}: {{ end }}{{ .Title }}</h1>
+  <h1>{{ if eq .Kind "taxonomy" }}{{ humanize .Data.Singular }}: {{ end }}{{ .Title }} {{ with .OutputFormats.Get "RSS" }}<a href="{{ .RelPermalink }}"><img src="{{ $.Site.BaseURL }}rss.svg"></img></a>{{ end }}</h1>
 </header>
 <main class="container" role="main">
   {{ range $paginator.Pages }}
