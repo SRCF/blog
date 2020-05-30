@@ -1,0 +1,24 @@
+{{ partial "header.html" . }}
+<header class="container">
+  <h1>{{ .Title }}</h1>
+  {{ partial "subheading.html" . }}
+  {{ partial "tags.html" . }}
+</header>
+<main class="container">
+  <div>
+    {{ .Content }}
+  </div>
+  <div class="row">
+    <div class="col-6 text-left">
+    {{ with .PrevInSection }}
+      <a class="text-reset" href="{{ .Permalink }}">&lt; {{ .Title }}</a>
+    {{ end }}
+    </div>
+    <div class="col-6 text-right">
+    {{ with .NextInSection }}
+      <a class="text-reset" href="{{ .Permalink }}">{{ .Title }} &gt;</a>
+    {{ end }}
+    </div>
+  </div>
+</main>
+{{ partial "footer.html" . }}

@@ -1,0 +1,34 @@
+{{ partial "header.html" . }}
+{{ $paginator := .Paginate ( where site.RegularPages "Type" "in" site.Params.mainSections ) }}
+{{ if eq .Kind "taxonomy" }}
+  {{ $paginator = .Data }}
+{{ end }}
+<header class="container">
+  <h1>{{ if eq .Kind "taxonomy" }}{{ humanize .Data.Singular }}: {{ end }}{{ .Title }}</h1>
+</header>
+<main class="container" role="main">
+  {{ range $paginator.Pages }}
+  <div class="section">
+    <h2>
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+    </h2>
+    {{ partial "subheading.html" . }}
+    <div class="summary">
+      {{ .Summary | plainify | htmlUnescape }}
+    </div>
+    {{ partial "tags.html" . }}
+  </div>
+  {{ end }}
+  {{ if gt $paginator.TotalPages 1 }}
+  <nav aria-label="Page">
+    <ul class="pagination">
+      {{ range $paginator.Pagers }}
+      <li class="page-item {{ if eq $paginator.PageNumber .PageNumber }}active{{ end }}">
+        <a class="page-link" href="{{ .URL }}">{{.PageNumber}}</a>
+      </li>
+      {{ end }}
+    </ul>
+  </nav>
+  {{ end }}
+</main>
+{{ partial "footer.html" . }}

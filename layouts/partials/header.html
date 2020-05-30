@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{{ if not .IsHome }}{{ .Title }} - {{ end }}{{ .Site.Title }}</title>
+    <link href="/_srcf/vendor/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/_srcf/vendor/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/_srcf/srcf-bs.css" rel="stylesheet">
+    <link href="{{ .Site.BaseURL }}blog.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-light fixed-top">
+      <div class="container">
+        <h1 class="navbar-brand">
+          <a href="{{ .Site.BaseURL }}">
+            <img src="https://www.srcf.net/_srcf/images/logo.svg">
+            <span>
+              The SRCF Blog
+            </span>
+          </a>
+        </h1>
+      </div>
+    </nav>

@@ -1,0 +1,12 @@
+baseURL = "https://blog.srcf.net/"
+languageCode = "en-gb"
+title = "The SRCF blog"
+resourceDir = ".resources"
+
+[taxonomies]
+  author = "authors"
+  tag = "tags"
+
+[markup]
+  [markup.highlight]
+    style = "abap"

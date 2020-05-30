@@ -1,0 +1,5 @@
+<div class="tags">
+  {{ range .Params.tags }}
+  <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}/" class="badge badge-secondary">{{ . }}</a>
+  {{ end }}
+</div>
