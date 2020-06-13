@@ -6,7 +6,7 @@ HUGO = ./bin/hugo_$(HUGO_VERSION) --noTimes
 
 production:
 	$(HUGO) --destination $(DEST)
-	ln -fs $(DRAFTDEST) $(DEST)draft
+	ln -fsT $(DRAFTDEST) $(DEST)draft
 
 post:
 	./bin/new_post.py
