@@ -2,7 +2,7 @@ DEST = /public/societies/srcf-web/public_html/_blog/
 DRAFTDEST = /public/societies/srcf-web/public_html/_blog_draft/
 HUGO_VERSION = 0.71.1
 
-HUGO = ./bin/hugo_$(HUGO_VERSION) --noTimes
+HUGO = ./bin/hugo_$(HUGO_VERSION) --noTimes --cacheDir $(PWD)/.cache/
 
 production:
 	$(HUGO) --destination $(DEST)
