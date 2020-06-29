@@ -1,6 +1,6 @@
 ---
 title: "Cross-Site Request Forgery"
-date: 2020-06-20T01:27:49+00:00
+date: 2020-06-29T01:27:49+00:00
 tags: ['security', 'control-panel']
 authors: ["Dexter Chua"]
 ---
