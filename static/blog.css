@@ -16,3 +16,7 @@ header {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
 }
+
+main.footer {
+  text-align: center;
+}
