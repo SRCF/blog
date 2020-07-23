@@ -2,6 +2,7 @@ baseURL = "https://blog.srcf.net/"
 languageCode = "en-gb"
 title = "The SRCF blog"
 resourceDir = ".resources"
+canonifyurls = "true"
 
 [taxonomies]
   author = "authors"
