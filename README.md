@@ -10,3 +10,7 @@
 
 # New post
 To make a new post, run `make post` and follow instructions
+
+# Licenses
+Blog posts are licensed under CC BY-SA 4.0. This includes everything in the
+`content/` folder. Everything else is under an MIT license.
