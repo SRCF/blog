@@ -11,12 +11,12 @@
   <div class="row">
     <div class="col-6 text-left">
     {{ with .PrevInSection }}
-      <a class="text-reset" href="{{ .Permalink }}">&lt; {{ .Title }}</a>
+    <a class="text-reset" href="{{ .Permalink }}"><i class="fa fa-arrow-left" aria-hidden="true"></i> {{ .Title }}</a>
     {{ end }}
     </div>
     <div class="col-6 text-right">
     {{ with .NextInSection }}
-      <a class="text-reset" href="{{ .Permalink }}">{{ .Title }} &gt;</a>
+    <a class="text-reset" href="{{ .Permalink }}">{{ .Title }} <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
     {{ end }}
     </div>
   </div>
