@@ -9,16 +9,16 @@
     <link href="https://www.srcf.net/_srcf/srcf-bs.css" rel="stylesheet">
     <link href="{{ .Site.BaseURL }}blog.css" rel="stylesheet">
   </head>
-  <body>
-    <nav class="navbar navbar-expand-md navbar-light fixed-top">
+  <body class="d-flex flex-column h-100">
+    <nav class="navbar navbar-expand navbar-light fixed-top bg-light">
       <div class="container">
-        <h1 class="navbar-brand">
-          <a href="{{ .Site.BaseURL }}">
-            <img src="https://www.srcf.net/_srcf/images/logo.svg">
-            <span>
-              The SRCF Blog
-            </span>
-          </a>
-        </h1>
+        <a class="navbar-brand" href="{{ .Site.BaseURL }}/">
+          <img src="/_srcf/images/logo.svg" />
+          <span class="d-none d-lg-inline">
+            <span class="text-danger">Student-Run</span>
+            <span class="text-primary">Computing Facility</span>
+            Blog
+          </span>
+        </a>
       </div>
     </nav>
